@@ -1,0 +1,167 @@
+<?php
+
+declare(strict_types=1);
+
+namespace UselessSoft\HttpConstants\Request;
+
+use PHPUnit\Framework\TestCase;
+
+final class HeaderTest extends TestCase
+{
+    /**
+     * @dataProvider headersProvider
+     */
+    public function test(string $actual, string $expected) : void
+    {
+        self::assertSame($expected, $actual);
+    }
+
+    /**
+     * @return string[][]
+     */
+    public function headersProvider() : array
+    {
+        return [
+            [
+                Header::Accept,
+                'Accept',
+            ],
+            [
+                Header::AcceptCharset,
+                'Accept-Charset',
+            ],
+            [
+                Header::AcceptEncoding,
+                'Accept-Encoding',
+            ],
+            [
+                Header::AcceptDatetime,
+                'Accept-Datetime',
+            ],
+            [
+                Header::AcceptLanguage,
+                'Accept-Language',
+            ],
+            [
+                Header::AccessControlRequestHeaders,
+                'Access-Control-Request-Headers',
+            ],
+            [
+                Header::AccessControlRequestMethod,
+                'Access-Control-Request-Method',
+            ],
+            [
+                Header::Authorization,
+                'Authorization',
+            ],
+            [
+                Header::CacheControl,
+                'Cache-Control',
+            ],
+            [
+                Header::Connection,
+                'Connection',
+            ],
+            [
+                Header::ContentLength,
+                'Content-Length',
+            ],
+            [
+                Header::ContentMD5,
+                'Content-MD5',
+            ],
+            [
+                Header::ContentType,
+                'Content-Type',
+            ],
+            [
+                Header::Cookie,
+                'Cookie',
+            ],
+            [
+                Header::Date,
+                'Date',
+            ],
+            [
+                Header::Expect,
+                'Expect',
+            ],
+            [
+                Header::Forwarded,
+                'Forwarded',
+            ],
+            [
+                Header::From,
+                'From',
+            ],
+            [
+                Header::Host,
+                'Host',
+            ],
+            [
+                Header::IfMatch,
+                'If-Match',
+            ],
+            [
+                Header::IfModifiedSince,
+                'If-Modified-Since',
+            ],
+            [
+                Header::IfNoneMatch,
+                'If-None-Match',
+            ],
+            [
+                Header::IfRange,
+                'If-Range',
+            ],
+            [
+                Header::IfUnmodifiedSince,
+                'If-Unmodified-Since',
+            ],
+            [
+                Header::MaxForwards,
+                'Max-Forwards',
+            ],
+            [
+                Header::Origin,
+                'Origin',
+            ],
+            [
+                Header::Pragma,
+                'Pragma',
+            ],
+            [
+                Header::ProxyAuthorization,
+                'Proxy-Authorization',
+            ],
+            [
+                Header::Range,
+                'Range',
+            ],
+            [
+                Header::Referer,
+                'Referer',
+            ],
+            [
+                Header::TE,
+                'TE',
+            ],
+            [
+                Header::Upgrade,
+                'Upgrade',
+            ],
+            [
+                Header::UserAgent,
+                'User-Agent',
+            ],
+            [
+                Header::Via,
+                'Via',
+            ],
+            [
+                Header::Warning,
+                'Warning',
+            ],
+        ];
+    }
+}
